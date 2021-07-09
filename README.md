@@ -6,34 +6,36 @@ Below are two coding challenges, one focused on backend, the other focused on fr
 
 The challenges are not intended to take a significant amount of time. If you feel like the challenges are taking more than a couple hours to complete, please feel free to reach out to us.
 
-When you are done, please send your code to (coding-challenge@daupler.com). You are welcome to send a zipped folder or share it using Github.
-
 ## Backend Challenge: Django Service
 
-Create a Django backend service that allows users to manage their after hours teams. A team is a list of team members, with each team member having a role within its team.
+Create a Django backend service that allows users to manage their after hours teams. A team is an ordered list of team members, with each team member having a role within its team.
 
-During an emergency, the members of a team will be called one by one according to a specific order.
+During an emergency, the members of a team will be called one by one according to the team's order.
 
 Here is an example of a team list provided for a customer's "Water Division" team, indicating the roles and call order:
 
-| Name   | Role              |
+| User   | Role              |
 | ------ | ----------------- |
 | Cooper | First Responder   |
-| Laura  | Standby Responder |
 | Leland | Standby Responder |
+| Laura  | Standby Responder |
 | Bob    | Supervisor        |
+
+If we needed to call this team, we'd first call Cooper, then Leland, then Laura, then Bob.
 
 ### Requirements:
 
 - Use Django to create a backend service that can store teams and team members. You can use any library on top of Django that you like. You may use the default SQLite database.
-
+- Your backend service should be designed to ensure we can call the users one by one according to the team order.  You should not write any code for the actual calls.
 - Your service should have an API that allows users to perform the following actions:
 
   - View a list of teams, including their members
   - Create new teams
-  - Add and remove team members from a team
+  - Add/remove team members
+  - Swap two team member's position
 
 - Write at least one test, but no more than five. Try to write tests that you feel provide the most value. You do not need to write every test you would write for production-ready code.
+- Send your code to (coding-challenge@daupler.com). You are welcome to send a zipped folder or share it using Github.
 
 ## Frontend Challenge: Single Page Application
 
@@ -60,11 +62,12 @@ In order to view the log, the user needs to login. Once logged in, the user is a
   - Filters by the issue ID
 
 - Use the provided [JSON data](spa_mock_data.json) to mock API calls
+- Send your code to (coding-challenge@daupler.com). You are welcome to send a zipped folder or share it using Github.
 
 ### Notes
 
 - You do not need to write any tests
-- You do not have to use strict TypeScript
+- You do not have to use strict TypeScript, though it is preferred (at Daupler we TypeScript with strict mode disabled)
 
 ## Alternative: Share an existing project
 
