@@ -32,7 +32,6 @@ If we needed to call this team, we'd first call Cooper, then Leland, then Laura,
   - View a list of teams, including their members
   - Create new teams
   - Add/remove team members
-  - Swap two team member's position
 
 - Write at least one test, but no more than five. Try to write tests that you feel provide the most value. You do not need to write every test you would write for production-ready code.
 - Send your code to (coding-challenge@daupler.com). You are welcome to send a zipped folder or share it using Github.
